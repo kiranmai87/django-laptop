@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<h1 style="color: brown;text-decoration: double;text-align: justify;">Smarton Laptops</h1>
+{% for i in list7 %}
+<div class="container" align="left">
+<div class="gallery">
+    <hr>
+    <hr>
+    <hr>
+    <a target="_blank" href="{{i.6}}"><b class="text-primary">{{i.0}}</b></a><br>
+    <table>
+        <tr>
+            <td>    <img src="{{i.5}}" alt="not available" height="150" width="250" ></td>
+   <td>
+    <h5>ratings: {{i.2}}
+        <span>&#9733;</span></h5><br>
+    
+          <i> price: <b>{{i.1}}</b> </i>&nbsp;<s>{{i.4}}</s>&nbsp; <b style="color: red;">{{i.3}}</b></td></tr>
+    </table>    
+  </div>
+</div>
+{% endfor %}
+
+{% endblock content  %}
